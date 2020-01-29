@@ -22,7 +22,8 @@ jobs:
       - run:
           name: install aws cli
           command: |
-            pip3 install awscli --upgrade --user
+            which pip
+            pip install awscli --upgrade --user
 workflows:
   version: 2
   build-and-deploy:
