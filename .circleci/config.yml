@@ -23,6 +23,7 @@ jobs:
             source ~/.bashrc
             pyenv update
             pyenv install 3.5.2
+            pyenv global 3.5.2
             pyenv which python
             pyenv which pip
             pyenv exec pip install awscli --upgrade --user
