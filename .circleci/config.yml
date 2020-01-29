@@ -23,6 +23,7 @@ jobs:
             source ~/.bashrc
             pyenv update
             pyenv install 3.5.2
+            pip install awscli --upgrade --user
       - run:
           name: installing aws cli1
           command: |
