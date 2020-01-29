@@ -17,10 +17,13 @@ jobs:
             unset PYENV_ROOT
             curl https://pyenv.run | bash
             export PATH="$HOME/.pyenv/bin:$PATH"
+            echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
+            echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+            echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
             pyenv update
             pyenv install 3.5.2
       - run:
-          name: install aws cli
+          name: installing aws cli
           command: |
             which pip
             pip install awscli --upgrade --user
