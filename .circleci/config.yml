@@ -24,7 +24,12 @@ jobs:
             pyenv update
             pyenv install 3.5.2
       - run:
-          name: installing aws cli
+          name: installing aws cli1
+          command: |
+            source ~/.bashrc
+            which pip
+      - run:
+          name: installing aws cli2
           command: |
             source ~/.bashrc
             which pip
